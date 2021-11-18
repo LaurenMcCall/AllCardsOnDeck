@@ -1,0 +1,53 @@
+
+PEDAC
+
+Problem
+
+Create a new deck of cards which will be a list of 52 strings where the
+strings are similar to "Ace of Clubs", "2 of Clubs", etc. 
+
+
+
+Example:
+
+
+Data (data structures)
+`string`
+`list`
+`looping`?
+four suits: "Clubs", "Diamonds", "Hearts", and "Spades".
+13 ranks: "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", and "King".
+
+Algorithm 
+
+
+
+Algorithm A
+  - Make a new list of strings `deck`
+  - Initialize the list strings with 52 explicity stated cards from Example Section
+  - Shuffle them with Fisher Yates (paste algo here)
+      numberOfCards = length of our deck
+
+      for rightIndex from numberOfCards - 1 down to 1 do:
+      leftIndex = random integer that is greater than or equal to 0 and LESS than rightIndex. See the section "How do we get a random integer")
+
+      Now swap the values at rightIndex and leftIndex by doing this:
+      leftCard = the value from deck[leftIndex]
+      rightCard = the value from deck[rightIndex]
+      deck[rightIndex] = leftCard
+      deck[leftIndex] = rightCard
+
+  - first card = deck[0]
+  - second card = deck[1]
+  - print first and second card
+
+Algorithm B
+
+  - Make a list of the 4 suits and call this list `suits`
+  - Make a list of the 13 ranks and call this list `ranks`
+  - Make a new list of strings named `deck` 
+  - Make a loop that goes through the list `suits`
+    - Make a loop that goes through the list `ranks` 
+      -For each rank, make a new string of the form $"{rank} of {suit}"
+      -Add that newly formed string to the end of the deck list. 
+  - Same as algo A
